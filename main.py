@@ -121,6 +121,7 @@ elif choice == "Outlier Analysis":
             st.pyplot(fig)
 
 elif choice == "Predictive Model":
-    os.system("streamlit run Streamlit_App.py")
+    os.system("taskkill /IM streamlit.exe /F")  # Kill the current app (Windows)
+    os.system("streamlit run Streamlit_App.py")  # Start the new app
 
 
