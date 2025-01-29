@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import io
 import numpy as np
 import os
+import subprocess
+
 
 # Load the datasets
 data_dict_file = 'Diabetes Data Dictionary.csv'
@@ -119,6 +121,7 @@ elif choice == "Outlier Analysis":
             st.pyplot(fig)
 
 elif choice == "Predictive Model":
-    os.system("streamlit run streamlit_app.py")
+    subprocess.Popen(["streamlit", "run", "Streamlit_App.py"])
+
 
 
