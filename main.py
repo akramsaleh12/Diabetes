@@ -121,7 +121,6 @@ elif choice == "Outlier Analysis":
             st.pyplot(fig)
 
 elif choice == "Predictive Model":
-    subprocess.Popen(["streamlit", "run", "Streamlit_App.py"])
-
+    os.system("streamlit run Streamlit_App.py")
 
 
