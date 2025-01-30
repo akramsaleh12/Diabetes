@@ -208,4 +208,4 @@ elif choice == "Data Dictionary":
         st.dataframe(filtered_dict)
 
 elif choice == "Predictive Model":
-    os.system("https://prediction-application.streamlit.app/")
+    os.system("prediction-application.streamlit.app")
