@@ -227,8 +227,8 @@ elif choice == "Predictive Model":
         unsafe_allow_html=True
     )
     
-    st.image("image1.jpg")
-    st.title("Diabetes Prediction Model")
+    # st.image("image1.jpg")
+    st.header("Diabetes Prediction Model")
     st.write("Enter the patient's data to predict the diabetes outcome.")
     
     # Input fields for user data
