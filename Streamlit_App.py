@@ -9,6 +9,18 @@ saved_data = joblib.load(model_filename)
 model = saved_data['model']
 medians = saved_data['medians']
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #F0F8FF;  # Light blue background
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.image("image1.jpg")
 st.title("Diabetes Prediction Model")
 st.write("Enter the patient's data to predict the diabetes outcome.")
 
