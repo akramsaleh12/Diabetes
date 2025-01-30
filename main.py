@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import io
 import numpy as np
 import os
+import subprocess
 
 # Custom CSS for Styling with Background Color
 st.markdown("""
@@ -208,4 +209,4 @@ elif choice == "Data Dictionary":
         st.dataframe(filtered_dict)
 
 elif choice == "Predictive Model":
-    os.system("streamlit run Streamlit_App.py")
+    subprocess.run(["streamlit", "run", Streamlit_App.py])
