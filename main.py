@@ -44,7 +44,7 @@ data = pd.read_csv(data_file)
 
 # Streamlit App Title
 st.image("image2.jpg")
-st.title("Diabetes Dataset Descriptive Analytics")
+# st.title("Diabetes Dataset Descriptive Analytics")
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
@@ -208,8 +208,4 @@ elif choice == "Data Dictionary":
         st.dataframe(filtered_dict)
 
 elif choice == "Predictive Model":
-    st.markdown("""
-    <script>
-        window.open("https://prediction-application.streamlit.app/");
-    </script>
-    """, unsafe_allow_html=True)
+    
