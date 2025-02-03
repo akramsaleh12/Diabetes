@@ -9,7 +9,7 @@ import joblib
 
 # Load user credentials
 def load_users():
-    users_file = 'users.csv'
+    users_file = '/mnt/data/users.csv'
     users_df = pd.read_csv(users_file)
     return {row['username']: row['password'] for _, row in users_df.iterrows()}
 
@@ -27,12 +27,19 @@ username = st.sidebar.text_input("Username")
 password = st.sidebar.text_input("Password", type="password")
 login_button = st.sidebar.button("Login")
 
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
 if login_button:
     if authenticate(username, password, users):
         st.sidebar.success("Login successful!")
+        st.session_state.authenticated = True
     else:
         st.sidebar.error("Invalid username or password. Please try again.")
-        st.stop()
+        st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.stop()
 # Custom CSS for Styling with Background Color
 st.markdown("""
     <style>
