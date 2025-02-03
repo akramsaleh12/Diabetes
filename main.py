@@ -7,6 +7,33 @@ import numpy as np
 import os
 import joblib
 
+# Load user credentials
+def load_users():
+    users_file = 'users.csv'
+    users_df = pd.read_csv(users_file)
+    return {row['username']: row['password'] for _, row in users_df.iterrows()}
+
+# Authentication function
+def authenticate(username, password, users):
+    return username in users and users[username] == password
+
+# Streamlit App Title
+st.title("Diabetes Dataset Descriptive Analytics")
+
+# User Authentication
+users = load_users()
+st.sidebar.header("User Login")
+username = st.sidebar.text_input("Username")
+password = st.sidebar.text_input("Password", type="password")
+login_button = st.sidebar.button("Login")
+
+if login_button:
+    if authenticate(username, password, users):
+        st.sidebar.success("Login successful!")
+    else:
+        st.sidebar.error("Invalid username or password. Please try again.")
+        st.stop()
+
 # Custom CSS for Styling with Background Color
 st.markdown("""
     <style>
