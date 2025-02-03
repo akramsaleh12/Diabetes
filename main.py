@@ -9,7 +9,7 @@ import joblib
 
 # Load user credentials
 def load_users():
-    users_file = '/mnt/data/users.csv'
+    users_file = 'users.csv'
     users_df = pd.read_csv(users_file)
     return {row['username']: row['password'] for _, row in users_df.iterrows()}
 
