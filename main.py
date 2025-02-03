@@ -30,6 +30,9 @@ login_button = st.sidebar.button("Login")
 if login_button:
     if authenticate(username, password, users):
         st.sidebar.success("Login successful!")
+    else:
+        st.sidebar.error("Invalid username or password. Please try again.")
+        st.stop().
         # Custom CSS for Styling with Background Color
         st.markdown("""
             <style>
@@ -287,9 +290,7 @@ if login_button:
                     st.error(f"An error occurred: {e}")
         
 
-    else:
-        st.sidebar.error("Invalid username or password. Please try again.")
-        st.stop()
+    
 
 
     
