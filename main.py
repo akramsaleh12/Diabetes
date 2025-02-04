@@ -159,8 +159,7 @@ elif choice == "Correlation Analysis":
         
     # Add explanation about correlation analysis
     st.write("""
-    **What is Correlation Analysis?**
-            
+                
     Correlation analysis measures the strength and direction of the relationship between two variables. 
     in this dataset, it helps us understand:
     - How each feature relates to the target variable (`Outcome`).
