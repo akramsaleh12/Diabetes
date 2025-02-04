@@ -47,7 +47,7 @@ def authenticate(username, password, users):
 
 # Streamlit App Title
 st.image("image2.jpg")
-st.title("Diabetes Dataset Descriptive Analytics")
+st.title("Diabetes DataSet Analytics")
 
 # User Authentication
 users = load_users()
