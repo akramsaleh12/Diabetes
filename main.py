@@ -6,6 +6,34 @@ import io
 import numpy as np
 import os
 import joblib
+# Custom CSS for Styling with Background Color
+st.markdown("""
+    <style>
+        body {
+            background-color: #e6f7ff;
+            color: #333333;
+         }
+        .stApp {
+            background-color: #F0F8FF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                }
+        .stDataFrame {
+            background-color: #f0f8ff;
+            border-radius: 5px;
+                }
+        .stSidebar {
+                    background-color: #007acc;
+                    color: white;
+                    padding: 15px;
+                    border-radius: 10px;
+                }
+        h1, h2, h3 {
+                    color: #007acc;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 # Load user credentials
 def load_users():
@@ -41,34 +69,6 @@ if login_button:
 
 if not st.session_state.authenticated:
     st.stop()
-# Custom CSS for Styling with Background Color
-st.markdown("""
-    <style>
-        body {
-            background-color: #e6f7ff;
-            color: #333333;
-         }
-        .stApp {
-            background-color: #F0F8FF;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                }
-        .stDataFrame {
-            background-color: #f0f8ff;
-            border-radius: 5px;
-                }
-        .stSidebar {
-                    background-color: #007acc;
-                    color: white;
-                    padding: 15px;
-                    border-radius: 10px;
-                }
-        h1, h2, h3 {
-                    color: #007acc;
-                }
-        </style>
-        """, unsafe_allow_html=True)
 
 # Load the datasets
 data_dict_file = 'Diabetes Data Dictionary.csv'
